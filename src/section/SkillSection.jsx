@@ -109,18 +109,7 @@ export default function SkillSection() {
                   iconName={skill.name} 
                 />
               ))}
-              {/* Custom AI Cards */}
-              <div 
-                key="groq-api"
-                className="group w-full p-4 rounded-2xl flex flex-col justify-center items-center gap-2 bg-[#14274E]/80 backdrop-blur-sm border border-white/10 hover:border-green-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 cursor-pointer"
-              >
-                <div className="text-3xl md:text-4xl transition-transform duration-300 group-hover:scale-110">
-                  🤖
-                </div>
-                <h1 className="text-sm md:text-base font-medium text-gray-200 group-hover:text-green-400 transition-colors duration-300">
-                  GROQ API
-                </h1>
-              </div>
+              <SkillCard key="groq-api" iconClass="" iconName="GROQ API" emoji="🤖" />
             </div>
           </div>
         </div>
