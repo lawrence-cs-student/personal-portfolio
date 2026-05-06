@@ -30,26 +30,25 @@ export default function SkillSection() {
   ];
 
   return (
-    <section id="skills" className="py-16 px-6 bg-gradient-to-b from-gray-900 to-gray-950">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent mb-3">
+    <section id="skills" className="py-20 px-6 bg-gradient-to-b from-gray-900 to-gray-950 relative">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-14">
+          <span className="text-sky-400 text-sm font-semibold uppercase tracking-widest">What I Use</span>
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent mt-2 mb-3">
             Technologies I Work With
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-xl mx-auto text-sm">
             Tools and frameworks I use to build modern, responsive web applications
           </p>
         </div>
 
-        {/* Category Sections */}
-        <div className="space-y-12">
+        <div className="space-y-10">
           
           {/* Frontend */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-              <span className="w-1 h-6 bg-sky-500 rounded-full"></span>
-              Frontend Development
+            <h3 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2 uppercase tracking-widest">
+              <span className="w-6 h-px bg-sky-500"></span>
+              Frontend
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
               {skills.slice(0, 7).map((skill) => (
@@ -64,8 +63,8 @@ export default function SkillSection() {
 
           {/* Backend & Databases */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-              <span className="w-1 h-6 bg-blue-500 rounded-full"></span>
+            <h3 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2 uppercase tracking-widest">
+              <span className="w-6 h-px bg-blue-500"></span>
               Backend & Databases
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
@@ -81,8 +80,8 @@ export default function SkillSection() {
 
           {/* DevOps & Tools */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-              <span className="w-1 h-6 bg-purple-500 rounded-full"></span>
+            <h3 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2 uppercase tracking-widest">
+              <span className="w-6 h-px bg-purple-500"></span>
               DevOps & Tools
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
@@ -98,9 +97,9 @@ export default function SkillSection() {
 
           {/* Cloud & AI */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-              <span className="w-1 h-6 bg-green-500 rounded-full"></span>
-              Cloud & AI Integration
+            <h3 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2 uppercase tracking-widest">
+              <span className="w-6 h-px bg-green-500"></span>
+              Cloud & AI
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
               {skills.slice(16, 18).map((skill) => (

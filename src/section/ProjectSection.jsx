@@ -17,7 +17,7 @@ export default function ProjectSection() {
                 "/images/aidukado16.PNG", "/images/aidukado19.PNG", "/images/aidukado20.PNG"
             ],
             techStack: ["React", "FastAPI", "Tailwind", "PostgreSQL", "Cloudflare R2"],
-            projectUrl: "#"
+            projectUrl: "https://ai-dukado.vercel.app/login"
         },
         {
             id: "travelai",
@@ -25,9 +25,12 @@ export default function ProjectSection() {
             projectDescription: "AI-assisted travel web application that provides personalized destination recommendations, allowing users to explore tourist spots with detailed insights, interactive maps, and bookmarking features.",
             projectType: "Web App",
             imageUrl: "/images/travelai.PNG",
-            images: ["/images/travelai.PNG"],
+            images: [
+                "/images/travelai.PNG", "/images/travelai2.PNG", "/images/travelai3.PNG",
+                "/images/travelai4.PNG", "/images/travelai5.PNG"
+            ],
             techStack: ["React", "Express.js", "Tailwind", "MongoDB"],
-            projectUrl: "ai-dukado.vercel.app"
+            projectUrl: "#"
         },
         {
             id: "crypto-scanner",
@@ -37,7 +40,7 @@ export default function ProjectSection() {
             imageUrl: "/images/crypto-scanner.PNG",
             images: ["/images/crypto-scanner.PNG", "/images/crypto-scanner2.PNG", "/images/crypto-scanner3.PNG"],
             techStack: ["React", "FastAPI", "Bootstrap"],
-            projectUrl: "#"
+            projectUrl: "https://crypto-scanner-ecru.vercel.app/"
         },
         {
             id: "affiliate-portfolio",
@@ -47,7 +50,7 @@ export default function ProjectSection() {
             imageUrl: "/images/client1.PNG",
             images: ["/images/client1.PNG", "/images/client2.PNG", "/images/client4.PNG", "/images/client3.PNG"],
             techStack: ["Next.js", "Bootstrap"],
-            projectUrl: "#"
+            projectUrl: "https://client-affiliate-portfolio.vercel.app/"
         },
     ];
 
