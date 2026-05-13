@@ -1,119 +1,105 @@
-import SkillCard from "../components/SkillCard";
+import React from 'react';
 
-export default function SkillSection() {
-  const skills = [
-    // Frontend
-    { id: "js", iconClass: "devicon-javascript-plain colored", name: "JavaScript" },
-    { id: "react", iconClass: "devicon-react-original colored", name: "React" },
-    { id: "nextjs", iconClass: "devicon-nextjs-plain colored", name: "Next.js" },
-    { id: "css", iconClass: "devicon-css3-plain colored", name: "CSS3" },
-    { id: "tailwind", iconClass: "devicon-tailwindcss-plain colored", name: "Tailwind CSS" },
-    { id: "bootstrap", iconClass: "devicon-bootstrap-plain colored", name: "Bootstrap" },
-    { id: "html", iconClass: "devicon-html5-plain colored", name: "HTML5" },
-    
-    // Backend & Databases
-    { id: "python", iconClass: "devicon-python-plain colored", name: "Python" },
-    { id: "fastapi", iconClass: "devicon-fastapi-plain colored", name: "FastAPI" },
-    { id: "express", iconClass: "devicon-express-original", name: "Express.js" },
-    { id: "postgresql", iconClass: "devicon-postgresql-plain colored", name: "PostgreSQL" },
-    { id: "mysql", iconClass: "devicon-mysql-plain colored", name: "MySQL" },
-    { id: "mongodb", iconClass: "devicon-mongodb-plain colored", name: "MongoDB" },
-    
-    // DevOps & Tools
-    { id: "git", iconClass: "devicon-git-plain colored", name: "Git" },
-    { id: "github", iconClass: "devicon-github-original colored", name: "GitHub" },
-    { id: "figma", iconClass: "devicon-figma-plain colored", name: "Figma" },
-    
-    // Cloud & AI
-    { id: "cloudflare", iconClass: "devicon-cloudflare-plain colored", name: "Cloudflare R2" },
-    { id: "gemini", iconClass: "devicon-googlecloud-plain colored", name: "Gemini API" },
+const SkillSection = () => {
+  const skillCategories = [
+    {
+      title: "Frontend Mastery",
+      description: "Building immersive user interfaces with modern frameworks.",
+      skills: [
+        { name: "React", icon: "devicon-react-original colored" },
+        { name: "Next.js", icon: "devicon-nextjs-original" },
+        { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+        { name: "Bootstrap", icon: "devicon-bootstrap-plain colored" },
+        { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+        { name: "CSS", icon: "devicon-css3-plain colored" },
+        { name: "HTML", icon: "devicon-html5-plain colored" },
+      ]
+    },
+    {
+      title: "Backend & Systems",
+      description: "Crafting robust architectures and efficient data flows.",
+      skills: [
+        { name: "FastAPI", icon: "devicon-fastapi-plain colored" },
+        { name: "Node.js", icon: "devicon-nodejs-plain colored" },
+        { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
+        { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
+        { name: "MySQL", icon: "devicon-mysql-plain colored" },
+        { name: "Python", icon: "devicon-python-plain colored" },
+        { name: "C#", icon: "devicon-csharp-plain colored" },
+        { name: "Express.js", icon: "devicon-express-original" },
+      ]
+    },
+    {
+      title: "Tools & DevOps",
+      description: "Streamlining development with professional workflows.",
+      skills: [
+        { name: "Git", icon: "devicon-git-plain colored" },
+        { name: "Github", icon: "devicon-github-plain colored" },
+        { name: "Postman", icon: "devicon-postman-plain colored" },
+        { name: "VS Code", icon: "devicon-vscode-plain colored" },
+        { name: "Cloudflare", icon: "devicon-cloudflare-plain colored" },
+        { name: "Vercel", icon: "devicon-vercel-plain colored" },
+      ]
+    }
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 bg-gradient-to-b from-gray-900 to-gray-950 relative">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-14">
-          <span className="text-sky-400 text-sm font-semibold uppercase tracking-widest">What I Use</span>
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent mt-2 mb-3">
-            Technologies I Work With
-          </h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm">
-            Tools and frameworks I use to build modern, responsive web applications
-          </p>
+    <section id="skills" className="py-24 bg-[#FFF9EB] relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#6800FF05] -skew-x-12" />
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="text-[#6800FF] font-bold tracking-[0.2em] uppercase text-sm mb-4">Core Competencies</h2>
+          <h3 className="text-4xl md:text-5xl font-extrabold text-[#1A1A1A]">
+            My Technical <span className="text-[#6800FF]">Arsenal</span>
+          </h3>
+          <div className="w-20 h-1.5 bg-[#6800FF] mx-auto mt-6 rounded-full" />
         </div>
 
-        <div className="space-y-10">
-          
-          {/* Frontend */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2 uppercase tracking-widest">
-              <span className="w-6 h-px bg-sky-500"></span>
-              Frontend
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
-              {skills.slice(0, 7).map((skill) => (
-                <SkillCard 
-                  key={skill.id} 
-                  iconClass={skill.iconClass} 
-                  iconName={skill.name} 
-                />
-              ))}
-            </div>
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillCategories.map((category, idx) => (
+            <div key={idx} className="group bg-white p-8 rounded-[32px] border border-[#6800FF10] hover:border-[#6800FF30] hover:shadow-2xl hover:shadow-[#6800FF10] transition-all duration-500 hover:-translate-y-2">
+              <div className="mb-6">
+                <h4 className="text-2xl font-bold text-[#1A1A1A] mb-3 group-hover:text-[#6800FF] transition-colors">{category.title}</h4>
+                <p className="text-[#4A4A4A] leading-relaxed">{category.description}</p>
+              </div>
 
-          {/* Backend & Databases */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2 uppercase tracking-widest">
-              <span className="w-6 h-px bg-blue-500"></span>
-              Backend & Databases
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
-              {skills.slice(7, 13).map((skill) => (
-                <SkillCard 
-                  key={skill.id} 
-                  iconClass={skill.iconClass} 
-                  iconName={skill.name} 
-                />
-              ))}
+              <div className="grid grid-cols-2 gap-4">
+                {category.skills.map((skill, sIdx) => (
+                  <div key={sIdx} className="flex items-center gap-3 p-3 rounded-2xl bg-[#FFF9EB] border border-transparent group-hover:border-[#6800FF20] transition-all">
+                    <i className={`${skill.icon} text-2xl`} />
+                    <span className="font-semibold text-sm text-[#1A1A1A]">{skill.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          ))}
+        </div>
 
-          {/* DevOps & Tools */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2 uppercase tracking-widest">
-              <span className="w-6 h-px bg-purple-500"></span>
-              DevOps & Tools
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
-              {skills.slice(13, 16).map((skill) => (
-                <SkillCard 
-                  key={skill.id} 
-                  iconClass={skill.iconClass} 
-                  iconName={skill.name} 
-                />
-              ))}
+        {/* Feature Grid - More Complex Layout Item */}
+        <div className="mt-20 p-10 bg-[#6800FF] rounded-[40px] flex flex-col lg:flex-row items-center gap-10 shadow-2xl shadow-[#6800FF30]">
+          <div className="flex-1 text-white space-y-4">
+            <h4 className="text-3xl font-bold">Always Learning, Always Evolving</h4>
+            <p className="text-white/80 text-lg">
+              I stay at the forefront of technology by constantly exploring new frameworks and methodologies. 
+              My goal is to build software that isn't just functional, but exceptional.
+            </p>
+          </div>
+          <div className="flex gap-6">
+            <div className="px-6 py-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 text-center">
+              <div className="text-3xl font-bold text-white italic">100%</div>
+              <div className="text-white/60 text-xs uppercase font-bold tracking-wider">Committed</div>
             </div>
-          </div>
-
-          {/* Cloud & AI */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2 uppercase tracking-widest">
-              <span className="w-6 h-px bg-green-500"></span>
-              Cloud & AI
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
-              {skills.slice(16, 18).map((skill) => (
-                <SkillCard 
-                  key={skill.id} 
-                  iconClass={skill.iconClass} 
-                  iconName={skill.name} 
-                />
-              ))}
-              <SkillCard key="groq-api" iconClass="" iconName="GROQ API" emoji="🤖" />
+            <div className="px-6 py-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 text-center">
+              <div className="text-3xl font-bold text-white italic">Clean</div>
+              <div className="text-white/60 text-xs uppercase font-bold tracking-wider">Architecture</div>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default SkillSection;

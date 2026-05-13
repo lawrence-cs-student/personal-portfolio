@@ -1,69 +1,87 @@
-export default function ContactSection() {
-    return (
-        <section id="contact" className="py-20 px-6 bg-gradient-to-b from-gray-900 to-gray-950">
-            <div className="max-w-3xl mx-auto">
-                <div className="text-center mb-12">
-                    <span className="text-sky-400 text-sm font-semibold uppercase tracking-widest">Get In Touch</span>
-                    <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent mt-2">
-                        Contact Me
-                    </h2>
-                    <p className="text-gray-400 text-sm mt-3">
-                        Feel free to reach out for collaborations, opportunities, or just a chat.
-                    </p>
-                </div>
+import React from 'react';
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                    {/* Phone */}
-                    <a
-                        href="tel:+639295602695"
-                        className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-gray-800/50 border border-white/5 hover:border-sky-500/40 hover:shadow-lg hover:shadow-sky-500/10 transition-all duration-300"
-                    >
-                        <span className="w-12 h-12 flex items-center justify-center rounded-full bg-sky-500/10 border border-sky-500/30 text-2xl group-hover:scale-110 transition-transform">
-                            📞
-                        </span>
-                        <div className="text-center">
-                            <p className="text-gray-500 text-xs uppercase tracking-widest mb-1">Phone</p>
-                            <p className="text-gray-200 text-sm font-medium">0929 560 2695</p>
-                        </div>
-                    </a>
+const ContactSection = () => {
+  const contactDetails = [
+    { 
+      icon: "📧", 
+      label: "Email Me", 
+      value: "mark.lawrence.gonzales07@gmail.com", 
+      link: "mailto:mark.lawrence.gonzales07@gmail.com",
+      description: "Available for project inquiries and collaborations."
+    },
+    { 
+      icon: "🔗", 
+      label: "LinkedIn", 
+      value: "Mark Lawrence Gonzales", 
+      link: "https://www.linkedin.com/in/mark-lawrence-gonzales-5668b5255",
+      description: "Let's connect professionally on LinkedIn."
+    },
+    { 
+      icon: "📍", 
+      label: "Location", 
+      value: "Philippines", 
+      link: "",
+      description: "Remote / Hybrid"
+    }
+  ];
 
-                    {/* Email */}
-                    <a
-                        href="mailto:mark.lawrence.gonzales07@gmail.com"
-                        className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-gray-800/50 border border-white/5 hover:border-sky-500/40 hover:shadow-lg hover:shadow-sky-500/10 transition-all duration-300"
-                    >
-                        <span className="w-12 h-12 flex items-center justify-center rounded-full bg-sky-500/10 border border-sky-500/30 text-2xl group-hover:scale-110 transition-transform">
-                            ✉️
-                        </span>
-                        <div className="text-center">
-                            <p className="text-gray-500 text-xs uppercase tracking-widest mb-1">Email</p>
-                            <p className="text-gray-200 text-sm font-medium break-all">mark.lawrence.gonzales07@gmail.com</p>
-                        </div>
-                    </a>
+  return (
+    <section id="contact" className="py-32 bg-[#FFF9EB] relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="blob w-[800px] h-[800px] bg-[#6800FF] -top-40 -left-40 opacity-[0.03]" />
+      <div className="blob w-[600px] h-[600px] bg-[#6800FF] -bottom-40 -right-40 opacity-[0.05]" />
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-8 mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#6800FF10] border border-[#6800FF20] text-[#6800FF] text-sm font-black tracking-widest uppercase">
+            Let's Connect
+          </div>
+          <h2 className="text-5xl md:text-7xl font-black text-[#1A1A1A] leading-tight">
+            Ready to start your next <span className="text-[#6800FF]">Digital Chapter?</span>
+          </h2>
+          <p className="text-[#4A4A4A] text-xl md:text-2xl font-medium max-w-2xl mx-auto leading-relaxed">
+            I'm currently open to new opportunities and interesting projects. Feel free to reach out through any of these channels.
+          </p>
+        </div>
 
-                    {/* LinkedIn */}
-                    <a
-                        href="https://www.linkedin.com/in/mark-lawrence-gonzales-5668b5255"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-gray-800/50 border border-white/5 hover:border-sky-500/40 hover:shadow-lg hover:shadow-sky-500/10 transition-all duration-300"
-                    >
-                        <span className="w-12 h-12 flex items-center justify-center rounded-full bg-sky-500/10 border border-sky-500/30 group-hover:scale-110 transition-transform">
-                            <svg className="w-5 h-5 text-sky-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </span>
-                        <div className="text-center">
-                            <p className="text-gray-500 text-xs uppercase tracking-widest mb-1">LinkedIn</p>
-                            <p className="text-gray-200 text-sm font-medium">Connect with me</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {contactDetails.map((item, idx) => (
+            <a 
+              key={idx} 
+              href={item.link} 
+              target={item.link.startsWith('http') ? "_blank" : "_self"}
+              rel="noreferrer"
+              className="group bg-white p-10 rounded-[40px] border border-[#6800FF10] hover:border-[#6800FF] hover:shadow-[0_30px_60px_rgba(104,0,255,0.1)] transition-all duration-500 text-center flex flex-col items-center gap-6"
+            >
+              <div className="w-20 h-20 bg-[#6800FF10] rounded-3xl flex items-center justify-center text-4xl group-hover:bg-[#6800FF] group-hover:text-white transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-6">
+                {item.icon}
+              </div>
+              <div className="space-y-2">
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-[#6800FF]">{item.label}</p>
+                <p className="text-xl font-black text-[#1A1A1A] break-all">{item.value}</p>
+                <p className="text-sm font-medium text-[#4A4A4A60] pt-2">{item.description}</p>
+              </div>
+              
+            </a>
+          ))}
+        </div>
 
-            <p className="text-center text-gray-600 text-xs mt-12">
-                © {new Date().getFullYear()} Mark Lawrence Gonzales. All rights reserved.
-            </p>
-        </section>
-    );
-}
+        {/* Bottom decorative banner */}
+        <div className="mt-32 p-12 bg-[#1A1A1A] rounded-[48px] text-center space-y-6 shadow-2xl overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#6800FF] blur-[100px] opacity-20 -translate-y-1/2 translate-x-1/2" />
+          <h4 className="text-3xl md:text-4xl font-black text-white">Let's build something <span className="text-[#6800FF]">exceptional.</span></h4>
+          <p className="text-white/60 text-lg font-medium max-w-xl mx-auto">
+            Available for full-stack development and UI redesigning.
+          </p>
+          <div className="pt-4">
+            <a href="mailto:mark.lawrence.gonzales07@gmail.com" className="inline-flex items-center gap-3 px-10 py-5 bg-[#6800FF] text-white font-black rounded-2xl hover:bg-[#5000CC] hover:scale-105 transition-all shadow-xl shadow-[#6800FF40]">
+              Start a Conversation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
