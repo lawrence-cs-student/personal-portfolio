@@ -6,11 +6,11 @@ const SkillSection = () => {
       title: "Frontend Mastery",
       description: "Building immersive user interfaces with modern frameworks.",
       skills: [
+        { name: "JavaScript", icon: "devicon-javascript-plain colored" },
         { name: "React", icon: "devicon-react-original colored" },
-        { name: "Next.js", icon: "devicon-nextjs-original" },
+        { name: "Next.js", icon: "devicon-nextjs-plain colored" },
         { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
         { name: "Bootstrap", icon: "devicon-bootstrap-plain colored" },
-        { name: "JavaScript", icon: "devicon-javascript-plain colored" },
         { name: "CSS", icon: "devicon-css3-plain colored" },
         { name: "HTML", icon: "devicon-html5-plain colored" },
       ]
@@ -19,14 +19,17 @@ const SkillSection = () => {
       title: "Backend & Systems",
       description: "Crafting robust architectures and efficient data flows.",
       skills: [
+        { name: "Python", icon: "devicon-python-plain colored" },
         { name: "FastAPI", icon: "devicon-fastapi-plain colored" },
         { name: "Node.js", icon: "devicon-nodejs-plain colored" },
+        { name: "Express.js", icon: "devicon-express-original" },
+        { name: "C#", icon: "devicon-csharp-plain colored" },
+        { name: "Java", icon: "devicon-java-plain colored" },
         { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
         { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
         { name: "MySQL", icon: "devicon-mysql-plain colored" },
-        { name: "Python", icon: "devicon-python-plain colored" },
-        { name: "C#", icon: "devicon-csharp-plain colored" },
-        { name: "Express.js", icon: "devicon-express-original" },
+        
+        
       ]
     },
     {
