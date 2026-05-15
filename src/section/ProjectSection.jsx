@@ -27,10 +27,11 @@ export default function ProjectSection() {
             imageUrl: "/images/travelai.PNG",
             images: [
                 "/images/travelai.PNG", "/images/travelai2.PNG", "/images/travelai3.PNG",
-                "/images/travelai4.PNG", "/images/travelai5.PNG"
+                "/images/travelai4.PNG", "/images/travelai5.PNG", "/images/travelai6.PNG",
+                "/images/travelai7.PNG", "/images/travelai8.PNG"
             ],
             techStack: ["React", "Express.js", "Tailwind", "MongoDB"],
-            projectUrl: "#"
+            projectUrl: "https://travelai-system.vercel.app/"
         },
         {
             id: "crypto-scanner",
