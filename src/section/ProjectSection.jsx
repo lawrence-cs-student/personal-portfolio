@@ -41,7 +41,7 @@ export default function ProjectSection() {
             imageUrl: "/images/crypto-scanner.PNG",
             images: ["/images/crypto-scanner.PNG", "/images/crypto-scanner2.PNG", "/images/crypto-scanner3.PNG"],
             techStack: ["React", "FastAPI", "Bootstrap"],
-            projectUrl: "https://crypto-scanner-ecru.vercel.app/"
+            projectUrl: "#"
         },
         {
             id: "affiliate-portfolio",
